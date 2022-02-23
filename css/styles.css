@@ -51,10 +51,6 @@ body {
   overflow: hidden;
 }
 
-span {
-  color: var(--special-text-color);
-}
-
 /* Хедер */
 
 .header .container {
@@ -68,6 +64,10 @@ span {
 .nav {
   display: flex;
   align-items: center;
+}
+
+.nav-logo {
+  color: var(--special-text-color);
 }
 
 .logo {
@@ -265,13 +265,9 @@ span {
   pointer-events: none;
 }
 
-.modal-headline {
+.modal .modal-headline {
+  margin-top: 0;
   margin-bottom: 12px;
-  right: 40px;
-  top: 40px;
-
-  font-family: inherit;
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -280,13 +276,43 @@ span {
   color: var(--title-text-color);
 }
 
-.modal-list input {
+.modal-items {
+  position: relative;
   display: flex;
   flex-direction: column;
+}
 
+.modal-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+
+.modal-input {
   width: 100%;
-  border-radius: 4px;
+  height: 40px;
+  padding: 11px 0 11px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.modal-thumb {
+  position: absolute;
+  top: 42%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  /* fill: var(--title-text-color); */
+}
+
+.modal-input:hover + .modal-thumb {
+  border-color: var(--special-text-color);
+  fill: var(--special-text-color);
 }
 
 /* Наши приемущества */
