@@ -265,7 +265,7 @@ body {
   pointer-events: none;
 }
 
-.modal .modal-headline {
+.modal-headline {
   margin-top: 0;
   margin-bottom: 12px;
   font-weight: 700;
@@ -298,6 +298,7 @@ body {
   border-radius: 4px;
   margin-bottom: 10px;
   cursor: pointer;
+  transition: border 250ms var(--hover-time), outline 250ms var(--hover-time);
 }
 
 .modal-thumb {
@@ -307,12 +308,58 @@ body {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  /* fill: var(--title-text-color); */
+  fill: var(--title-text-color);
+  transition: fill 250ms var(--hover-time);
 }
 
+.modal-input:focus,
+.modal-input:hover {
+  border-color: var(--special-text-color);
+  outline: var(--special-text-color);
+}
+
+.modal-input:focus + .modal-thumb,
 .modal-input:hover + .modal-thumb {
   border-color: var(--special-text-color);
   fill: var(--special-text-color);
+}
+
+.modal-coment {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 16px 12px;
+  margin-bottom: 20px;
+  transition: border 250ms var(--hover-time), outline 250ms var(--hover-time);
+}
+
+.modal-coment:hover,
+.modal-coment:focus {
+  border-color: var(--special-text-color);
+  outline: var(--special-text-color);
+}
+
+.modal-submit {
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--special-text-color);
+  border: 0;
+  padding: 0;
+  color: var(--bg-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  transition: box-shadow 250ms var(--hover-time),
+    background-color 250ms var(--hover-time);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Наши приемущества */
