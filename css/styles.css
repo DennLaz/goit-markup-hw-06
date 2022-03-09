@@ -330,7 +330,14 @@ body {
   border-radius: 4px;
   padding: 16px 12px;
   margin-bottom: 20px;
+  letter-spacing: 0.01em;
+  font-size: 14px;
+  line-height: 16px;
   transition: border 250ms var(--hover-time), outline 250ms var(--hover-time);
+}
+
+.modal-coment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-coment:hover,
@@ -370,12 +377,13 @@ body {
   border-color: transparent;
   outline-color: var(--special-text-color);
   background-image: url();
-  background-color: var(--special-text-color);
+  /* background-color: var(--special-text-color); */
   background-origin: border-box;
   background-size: contain;
 }
 
 .link-desc {
+  margin-left: 5px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
