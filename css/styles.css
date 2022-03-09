@@ -362,22 +362,20 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   cursor: pointer;
-  /* transition: background-color 2550ms var(--hover-time); */
 }
 
 .modal-svg {
-  outline: 2px solid var(--title-text-color);
-  border-radius: 1px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
   margin-right: 8px;
   transition: background-color 250ms var(--hover-time),
-    outline 250ms var(--hover-time);
+    border 250ms var(--hover-time);
 }
 
 .input-checkbox:checked + .modal-svg {
   border-color: transparent;
-  outline-color: var(--special-text-color);
-  background-image: url();
-  /* background-color: var(--special-text-color); */
+  background-image: url(../images/icon-svg/full-check.svg);
+  background-color: var(--special-text-color);
   background-origin: border-box;
   background-size: contain;
 }
